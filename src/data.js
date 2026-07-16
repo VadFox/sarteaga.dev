@@ -2,9 +2,9 @@ export const data = {
   name: "Samuel Arteaga",
   title: ["Backend Developer", "Odoo Developer", "Python Engineer", "Data Base Specialist"],
   email: "sarteagafj.98@gmail.com",
-  phone: "0424-203-24-34",
+  phone: "+58-424-203-24-34",
   location: "Higuerote, Venezuela",
-  github: "https://github.com/test",
+  github: "https://github.com/VadFox",
   bio: "Técnico Superior en Informática e Ing. Informática en curso. Especializado en desarrollo backend con Python y ecosistema Odoo. Combino sólida base técnica con experiencia real en sistemas ERP y desarrollo de soluciones a medida.",
   quote: "El mundo está en constante cambio, la vida se llena de experiencias y buenos momentos, pero hay algo que nunca cambia para quien ama la tecnología: los 0 y 1.",
   stats: [
@@ -49,7 +49,7 @@ export const data = {
     },
     {
       period: "Abr 2019 — 2024",
-      role: "Asistente Administrativo Inmobiliario",
+      role: "Desarrollador de Software",
       company: "Feeninmuebles CF 2002",
       desc: "Diseñé y desarrollé un sistema de gestión inmobiliaria a medida para digitalizar y automatizar procesos que antes se ejecutaban manualmente, optimizando la gestión de propiedades, contratos y seguimiento de operaciones.",
     },
