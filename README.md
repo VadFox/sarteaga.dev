@@ -1,89 +1,48 @@
-# Samuel Arteaga — Portafolio
+# 🌌 Samuel Arteaga — Portafolio Personal
 
-Portafolio personal construido con React. Diseño oscuro y futurista.
+¡Bienvenido a mi portafolio! Este es un espacio digital diseñado y desarrollado desde cero para mostrar mi trayectoria, habilidades y los proyectos en los que he trabajado. 
 
-## 🚀 Levantar en local
+El sitio cuenta con un diseño **oscuro, moderno y futurista**, pensado para ofrecer una experiencia de usuario fluida, interactiva y visualmente atractiva.
 
+---
+
+## 🎯 Propósito del Proyecto
+
+Este portafolio fue construido con varios objetivos en mente:
+*   **Carta de Presentación:** Servir como mi plataforma principal para conectar con reclutadores, clientes y otros desarrolladores.
+*   **Vitrina de Proyectos:** Mostrar de manera interactiva mis desarrollos recientes, arquitecturas y soluciones de código.
+*   **Demostración Práctica:** Aplicar de forma real conceptos de desarrollo frontend modernos, modularización limpia y optimización de rendimiento.
+
+---
+
+## ⚡ Tecnologías y Características
+
+*   **React:** Estructura modular, dinámica y eficiente utilizando componentes funcionales y Hooks personalizados.
+*   **CSS Dinámico:** Estilos personalizados con un enfoque futurista, efectos de iluminación sutiles (*glow*) y animaciones fluidas al hacer scroll (implementadas con un Hook personalizado de intersección).
+*   **Responsive Design:** Adaptado perfectamente para una visualización óptima desde cualquier dispositivo (móvil, tablet o escritorio).
+*   **Despliegue Automatizado:** Integrado con GitHub Actions para compilación y despliegue continuo (CI/CD) en GitHub Pages.
+
+---
+
+## 🗂️ Secciones del Portafolio
+
+El portafolio está estructurado de forma que la navegación sea intuitiva:
+1.  **Hero:** Una introducción directa e impactante con mi enfoque profesional.
+2.  **Experiencia:** Línea de tiempo detallada de mi trayectoria laboral.
+3.  **Habilidades (Skills):** Desglose técnico de las tecnologías que domino.
+4.  **Proyectos:** Tarjetas interactivas con enlaces directos al código y a las demos de mis desarrollos destacados.
+5.  **Educación:** Resumen de mi formación académica y técnica.
+6.  **Contacto:** Formulario y accesos directos a mis redes para conectar fácilmente.
+
+---
+
+## 🚀 Guía de Uso Local (Para Desarrolladores)
+
+Si deseas clonar este proyecto para ver el código en tu entorno local o utilizarlo como plantilla:
+
+### 1. Clonar y levantar en desarrollo
 ```bash
+git clone [https://github.com/VadFox/sarteaga.dev.git](https://github.com/VadFox/sarteaga.dev.git)
+cd portfolio
 npm install
 npm start
-```
-
-## 📦 Build para producción
-
-```bash
-npm run build
-```
-
-## 🌐 Deploy en GitHub Pages
-
-### Opción 1 — Deploy manual (una sola vez)
-
-```bash
-npm run deploy
-```
-
-Esto construye el proyecto y sube la carpeta `build/` a la rama `gh-pages`.
-
-### Opción 2 — Deploy automático con GitHub Actions (recomendado)
-
-El archivo `.github/workflows/deploy.yml` ya está configurado.
-Cada vez que hagas `git push` a `main`, GitHub Actions construye y despliega automáticamente.
-
-**Pasos para activarlo:**
-1. Sube el proyecto a GitHub (ver abajo)
-2. Ve a tu repo → **Settings** → **Pages**
-3. En **Source** selecciona **Deploy from a branch**
-4. Rama: `gh-pages` / Carpeta: `/ (root)`
-5. Guarda — en ~2 minutos tu portafolio estará en:
-   `https://metariaqer.github.io/portfolio`
-
-## 📁 Subir a GitHub por primera vez
-
-```bash
-git init
-git add .
-git commit -m "feat: portafolio inicial"
-git branch -M main
-git remote add origin https://github.com/metariaqer/portfolio.git
-git push -u origin main
-```
-
-## ✏️ Personalizar contenido
-
-Todo el contenido (nombre, experiencia, proyectos, skills) está en un solo archivo:
-
-```
-src/data.js
-```
-
-Edita ese archivo y el portafolio se actualiza automáticamente.
-
-## 🗂️ Estructura del proyecto
-
-```
-portfolio/
-├── public/
-│   └── index.html
-├── src/
-│   ├── components/
-│   │   ├── Navbar.jsx / .css
-│   │   ├── Hero.jsx / .css
-│   │   ├── Skills.jsx / .css
-│   │   ├── Experience.jsx / .css
-│   │   ├── Projects.jsx / .css
-│   │   ├── Education.jsx
-│   │   └── Contact.jsx / .css
-│   ├── hooks/
-│   │   └── useReveal.js
-│   ├── styles/
-│   │   ├── global.css
-│   │   └── sections.css
-│   ├── data.js          ← edita aquí tu contenido
-│   ├── App.jsx
-│   └── index.js
-├── .github/
-│   └── workflows/
-│       └── deploy.yml   ← deploy automático
-└── package.json
-```
