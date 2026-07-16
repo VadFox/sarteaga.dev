@@ -7,7 +7,7 @@ WORKDIR /app
 
 COPY package.json pnpm-lock.yaml ./
 
-RUN pnpm install --frozen-lockfile --only-built-dependencies
+RUN pnpm install --frozen-lockfile --ignore-scripts
 
 COPY . .
 
