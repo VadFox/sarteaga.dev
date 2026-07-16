@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { data } from '../data';
+import { iconMap } from '../iconMap';
 import './Hero.css';
 
 export default function Hero() {
@@ -31,47 +32,65 @@ export default function Hero() {
     document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const allSkills = [...new Set(data.skills.flatMap((g) => g.items))];
+
   return (
     <section className="hero" id="hero">
       <div className="hero__grid" aria-hidden="true" />
       <div className="hero__glow hero__glow--1" aria-hidden="true" />
       <div className="hero__glow hero__glow--2" aria-hidden="true" />
 
-      <div className="hero__content">
-        <div className="hero__tag">disponible para proyectos</div>
+      <div className="hero__layout">
+        <div className="hero__content">
+          <div className="hero__tag">disponible para proyectos</div>
 
-        <h1 className="hero__name">
-          Samuel<br />
-          <span className="hero__name--accent">Arteaga</span>
-        </h1>
+          <h1 className="hero__name">
+            Samuel<br />
+            <span className="hero__name--accent">Arteaga</span>
+          </h1>
 
-        <p className="hero__title">
-          <span className="hero__typed">{displayText}</span>
-          <span className="hero__cursor">_</span>
-        </p>
+          <p className="hero__title">
+            <span className="hero__typed">{displayText}</span>
+            <span className="hero__cursor">_</span>
+          </p>
 
-        <p className="hero__bio">{data.bio}</p>
+          <p className="hero__bio">{data.bio}</p>
 
-        <blockquote className="hero__quote">"{data.quote}"
-            <span className="hero__quote-sign">— S.A.</span>
-        </blockquote>
+          <blockquote className="hero__quote">"{data.quote}"</blockquote>
 
-        <div className="hero__cta">
-          <button className="btn-primary" onClick={() => scrollTo('#projects')}>
-            Ver proyectos
-          </button>
-          <button className="btn-outline" onClick={() => scrollTo('#contact')}>
-            Contactar
-          </button>
+          <div className="hero__cta">
+            <button className="btn-primary" onClick={() => scrollTo('#projects')}>
+              Ver proyectos
+            </button>
+            <button className="btn-outline" onClick={() => scrollTo('#contact')}>
+              Contactar
+            </button>
+          </div>
+
+          <div className="hero__stats">
+            {data.stats.map((s) => (
+              <div key={s.label} className="hero__stat">
+                <span className="hero__stat-num">{s.num}</span>
+                <span className="hero__stat-label">{s.label}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div className="hero__stats">
-          {data.stats.map((s) => (
-            <div key={s.label} className="hero__stat">
-              <span className="hero__stat-num">{s.num}</span>
-              <span className="hero__stat-label">{s.label}</span>
-            </div>
-          ))}
+        <div className="hero__techstack" aria-hidden="false">
+          {allSkills.map((name) => {
+            const icon = iconMap[name];
+            if (!icon) return null;
+            return (
+              <div key={name} className="hero__tech-item" title={name}>
+                <img
+                  src={`https://cdn.simpleicons.org/${icon.slug}/${icon.color}`}
+                  alt={name}
+                  loading="lazy"
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
