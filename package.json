@@ -2,7 +2,7 @@
   "name": "samuel-arteaga-sarteaga.dev",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://VadFox.github.io/sarteaga.dev",
+  "homepage": ".",
   "engines": {
     "node": ">=18"
   },
