@@ -1,0 +1,42 @@
+/* ===== RESET & BASE ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --c1: #0a0a0f;
+  --c2: #0d0d1a;
+  --c3: #111128;
+  --accent: #00f5c4;
+  --accent2: #7b5ea7;
+  --accent3: #1a8cff;
+  --text: #e8e8f0;
+  --muted: #7a7a9a;
+  --border: rgba(0, 245, 196, 0.15);
+  --border-hover: rgba(0, 245, 196, 0.4);
+  --font-display: 'Syne', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --font-hero: 'Space Grotesk', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--c1);
+  color: var(--text);
+  font-family: var(--font-display);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--c1); }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
+
+/* ===== SELECTION ===== */
+::selection { background: rgba(0, 245, 196, 0.2); color: var(--accent); }

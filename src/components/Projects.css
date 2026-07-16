@@ -1,0 +1,123 @@
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: var(--c2);
+  border: 1px solid var(--border);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: border-color 0.3s, transform 0.4s, opacity 0.4s;
+  cursor: default;
+}
+
+.project-card--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-2px) !important;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--accent);
+}
+
+.project-card--featured::before {
+  background: var(--accent2);
+}
+
+.project-card--featured {
+  border-color: rgba(123, 94, 167, 0.25);
+}
+
+.project-card--featured:hover {
+  border-color: rgba(123, 94, 167, 0.5);
+}
+
+.project-badge {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.project-badge--featured {
+  background: rgba(123, 94, 167, 0.15);
+  color: #b08fd4;
+  border: 1px solid rgba(123, 94, 167, 0.3);
+}
+
+.project-badge--active {
+  background: rgba(0, 245, 196, 0.08);
+  color: var(--accent);
+  border: 1px solid rgba(0, 245, 196, 0.2);
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
+}
+
+.project-desc {
+  font-size: 14px;
+  color: rgba(232, 232, 240, 0.6);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 1.25rem;
+}
+
+.tech-chip {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  padding: 3px 8px;
+  background: rgba(26, 140, 255, 0.08);
+  border: 1px solid rgba(26, 140, 255, 0.2);
+  color: #6ab4ff;
+  letter-spacing: 0.5px;
+}
+
+.project-link {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s;
+}
+
+.project-link:hover {
+  opacity: 0.75;
+}
+
+.project-link i {
+  font-size: 15px;
+}

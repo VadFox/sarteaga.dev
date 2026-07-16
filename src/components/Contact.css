@@ -1,0 +1,50 @@
+.contact-box {
+  background: var(--c2);
+  border: 1px solid var(--border);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 0.75rem;
+}
+
+.contact-sub {
+  font-size: 14px;
+  color: rgba(232, 232, 240, 0.5);
+  margin-bottom: 2rem;
+  font-family: var(--font-mono);
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+  padding: 10px 20px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  transition: color 0.2s, border-color 0.2s;
+  letter-spacing: 0.5px;
+}
+
+.contact-item:hover {
+  color: var(--accent);
+  border-color: rgba(0, 245, 196, 0.3);
+}
+
+.contact-item i {
+  font-size: 16px;
+}
